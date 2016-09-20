@@ -8,10 +8,10 @@ A simple Wikipedia Scrapper that returns a JSON scrapped from Wikipedia.
 
 # Running the Program
 * INPUT
-  * The URL should be passed as a query string inside url parameter
+  * The URL should be passed as a query string inside `wiki` parameter
 
 * OUTPUT
   * The output contains three parameter: title, body and error
-    * 'title' contains the title of the document
-    * 'body' contains the first paragraph of text
-    * 'error' parameter is added whenever something goes wrong
+    * `title` contains the title of the document
+    * `body` contains the first paragraph of text
+    * `error` parameter is added whenever something goes wrong

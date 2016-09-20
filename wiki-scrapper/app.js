@@ -4,7 +4,7 @@
 * A simple Wikipedia Scrapper that returns a JSON scrapped from Wikipedia.
 *
 * INPUT
-*  - The URL should be passed as a query string inside url parameter
+*  - The URL should be passed as a query string inside wiki parameter
 *
 * OUTPUT
 *  - The output contains three parameter: title, body and error
