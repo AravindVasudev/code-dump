@@ -1,16 +1,12 @@
 # wiki-scrapper
 A simple Wikipedia Scrapper that returns a JSON scrapped from Wikipedia.
 
----------------------------------------------------------------------
-
-#### Demo
+# Demo
 ![success](working.png "wiki-scrapper success")
 
 ![error](error.png "wiki-scrapper error")
 
----------------------------------------------------------------------
-
-#### Running the Program
+# Running the Program
 * INPUT
   * The URL should be passed as a query string inside url parameter
 
