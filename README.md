@@ -1,2 +1,2 @@
-# js-scripts
-Experimenting with JS
+# code-dump
+Cool Code Snippets
