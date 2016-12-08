@@ -1,0 +1,94 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <style>
+  body {
+   font-family: Verdana;
+  }
+  h1, h2, h3 {
+   color: darkblue;
+  }
+  .rating-circle {
+   height: 2em;
+   width: 2em;
+   border: .1em solid black;
+   border-radius: 1.1em;
+   display: inline-block;
+   margin: 0;
+   padding: .1em;
+  }
+
+  .rating-hover {
+   background-color: yellow;
+  }
+
+  .rating-chosen {
+   background-color: green;
+  }
+ </style>
+</head>
+<body>
+ <h1>Contoso Web Developer Conference</h1>
+ <h2>Finding elements using jQuery</h2>
+ <div>This session is about identifying elements using jQuery methods and selectors.</div>
+ <h3>Rate this session</h3>
+ <div id="rating-container" max-value="5"></div>
+
+<div>
+  <label for="max-value">Enter max value:</label>
+  <input type="text" id="max-value" />
+  <button type="button" id="update-max-value">Update max value</button>
+</div>
+<button type="button" id="save-rating">Save rating</button>
+<div id="output"></div>
+ <script>
+        // your answer would go here
+	 $(function() {
+		var $circle = $("<div class = 'rating-circle'></div>");
+		var index = undefined;
+		var $circles = $("#rating-container");
+		var n = 5;
+
+		//Creates 5 circle at beginning
+		for(i = 0; i < 5; i++)
+			$circles.append($circle.clone());
+
+		//When the button is clicked, it clears the container, creates specified number of circles and sets the selected value back
+		$("#update-max-value").click(function(){
+			$circles.empty();
+			n = $("#max-value").val();
+			for(i = 0; i < n; i++)
+				$circles.append($circle.clone());
+			$circles.children().eq(index).prevAll().andSelf().addClass("rating-chosen");
+		});
+
+		//When circle is hovered, it removes rating-chosen class and adds rating-hover class to hovered and previous elements
+		$circles.on("mouseover", "div.rating-circle", function(){
+			$circles.children().removeClass("rating-chosen");
+			$(this).prevAll().andSelf().addClass("rating-hover");
+		});
+
+		//when circle is hovered out, it removes rating-hover class and restores previous state 
+		$circles.on("mouseout", "div.rating-circle", function(){
+			$circles.children().removeClass("rating-hover");
+			$circles.children().eq(index).prevAll().andSelf().addClass("rating-chosen");
+		});
+
+		//when circle is clicked, it stores the index of the clicked element and adds rating-chosen class to it and the elements preceeding it
+		$("#rating-container").on("click", "div.rating-circle", function(){
+			index = $circles.children().index(this);
+			$(this).prevAll().andSelf().addClass("rating-chosen");
+		});
+
+		//When 'Save Rating' button is clicked, a json object is created with value and maxValue parameters and is sent to the server and when done, the message parameter of the returned json object is displayed
+		$("#save-rating").click(function() {
+			var json = { value: index+1, maxValue: n};
+			$.post("http://jquery-edx.azurewebsites.net/api/Rating", json).done(function(msg){
+				$("#output").text(msg.message);
+			});
+		});
+	});
+ </script>
+</body>
+</html>
