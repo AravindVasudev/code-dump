@@ -5,7 +5,7 @@
     >> [ << + >> - ]               ; move i plus 2th cell back to current position
     +++++ + [ < ----- --- > - ] <  ; subtract 48(ASCII to Num) from i plus 1th character
 ]
-< [ - ]                              ; delete last character(Terminator 0)
+< [ - ]                            ; delete last character(Terminator 0)
 <                                  ; goto last character(helps the loop to begin)
 [ < ]                              ; goto next 0 cell (cell #1)
 >                                  ; goto first character
