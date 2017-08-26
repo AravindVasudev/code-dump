@@ -1,0 +1,14 @@
+{
+  "name": "servo_test_johnny_five",
+  "version": "1.0.0",
+  "description": "johnny five test",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "AravindVasudev",
+  "license": "MIT",
+  "dependencies": {
+    "johnny-five": "^0.11.6"
+  }
+}
