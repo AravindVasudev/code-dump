@@ -1,0 +1,82 @@
+[
+    {
+        "physics-1": ["C", 3],
+        "chemistry-1": ["D", 3],
+        "math-1": ["A", 4],
+        "programming": ["B", 3],
+        "eg": ["E", 4],
+        "english-1": ["B", 4],
+        "computer lab": ["S", 2],
+        "eg lab": ["A", 2],
+        "physics and chemistry lab-1": ["A", 1]
+    },
+    {
+        "dpsd": ["E", 3],
+        "pds-1": ["A", 3],
+        "dspd-lab": ["C", 2],
+        "pds-lab-1": ["A", 2],
+        "chemistry-2": ["C", 3],
+        "physics and chemistry lab-2": ["A", 1],
+        "english-2": ["B", 4],
+        "math-2": ["A", 4],
+        "physics-2": ["B", 3]
+    },
+    {
+        "pds-2": ["B", 3],
+        "dbms": ["E", 3],
+        "Computer Architecture": ["E", 3],
+        "ADC": ["E", 3],
+        "EVS": ["D", 3],
+        "TPDE": ["D", 4],
+        "pds-lab-2": ["S", 2],
+        "dbms-lab": ["S", 2]
+    },
+    {
+        "OS": ["D", 3],
+        "DAA": ["B", 3],
+        "SE": ["E", 3],
+        "CN": ["C", 3],
+        "MPMC": ["D", 3],
+        "PQT": ["S", 4],
+        "CN-lab": ["S", 2],
+        "MPMC-Lab": ["S", 2],
+        "OS-Lab": ["A", 2]
+    },
+    {
+        "IP": ["B", 4],
+        "OOAD": ["D", 3],
+        "TOC": ["C", 3],
+        "CG": ["C", 3],
+        "DM": ["C", 4],
+        "Case tools lab": ["A", 2],
+        "IP-lab": ["S", 2],
+        "CG-lab": ["S", 2]
+    },
+    {
+        "Distributed Systems": ["C", 3],
+        "Mobile Computing": ["C", 3],
+        "Compiler Design": ["D", 3],
+        "Digital Signal Processing": ["E", 4],
+        "Artificial Intelligence": ["D", 3],
+        "Data Warehousing and Data Mining": ["E", 3],
+        "Mobile Application Development Laboratory": ["S", 2],
+        "Compiler Laboratory": ["S", 2],
+        "Communication and Soft Skills - Laboratory Based": ["S", 2]
+    },
+    {
+        "Cryptography and Network Security": ["D", 3],
+        "Graph Theory and Applications": ["E", 3],
+        "Grid and Cloud Computing": ["E", 3],
+        "Resource Management Techniques": ["B", 3],
+        "Cyber Forensics": ["D", 3],
+        "Data Analytics": ["C", 3],
+        "Security Laboratory": ["S", 2],
+        "Grid and Cloud Computing Laboratory": ["S", 2]
+    },
+    {
+        "Multi-Core Architectures and Programming": ["C", 3],
+        "Human Computer Interaction": ["D", 3],
+        "Professional Ethics in Engineering": ["E", 3],
+        "Project Work": ["A", 6]
+    }
+]
