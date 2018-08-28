@@ -17,8 +17,8 @@ function countdown() {
 echo "1. 15 sec practice & 45 sec speaking \n2. 30 sec practice & 60 sec speaking"
 read -n1 -p "Choose: " choice
 if [ "$choice" = "1" ]; then
-    practice=5
-    speaking=5
+    practice=15
+    speaking=45
 else
     practice=30
     speaking=60
