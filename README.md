@@ -1,2 +1,2 @@
-# code-dump
-Cool Code Snippets
+# Code Dump
+A collection of simple POCs (Proof of Concept).
