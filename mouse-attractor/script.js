@@ -58,7 +58,13 @@ class Ball {
 
         this.velocity.add(this.acceleration);
         this.velocity.limit(20);
+        if (Math.random() < 0.1) { // 10% probability of adding noise
+            this.velocity.add(new Vector(Math.randomRange(-5, 5), Math.randomRange(-5, 5)));
+        }
+
         this.position.add(this.velocity);
+
+        this._boundaryCheck();
     }
 
     _accelerateTowardsMouse() {
@@ -69,6 +75,22 @@ class Ball {
         dir.mult(closeness);
 
         this.acceleration = dir;
+    }
+
+    _boundaryCheck() {
+        if (this.position.x < 0) {
+            this.velocity.x *= -1;
+            this.position.x = 0;
+        } else if (this.position.x > WIDTH) {
+            this.velocity.x *= -1;
+            this.position.x = WIDTH;
+        } else if (this.position.y < 0) {
+            this.velocity.y *= -1;
+            this.position.y = 0;
+        } else if (this.position.y > HEIGHT) {
+            this.velocity.y *= -1;
+            this.position.y = HEIGHT;
+        }
     }
 
     draw() {
