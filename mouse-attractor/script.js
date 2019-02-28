@@ -1,7 +1,7 @@
 const WIDTH = window.innerWidth;
 const HEIGHT = window.innerHeight;
 const FRAMERATE = 60;
-const NUMBALLS = 10;
+const NUMBALLS = 100;
 
 let mouse = null;
 
@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
     // Init Balls
     const balls = [];
     for (let i = 0; i < NUMBALLS; i++) {
-        balls.push(new Ball(ctx, Math.randomRange(5, 15)));
+        balls.push(new Ball(ctx, Math.randomRange(5, 8)));
     }
 
     // Update Mouse Vector
@@ -31,7 +31,8 @@ window.addEventListener('load', () => {
 });
 
 function draw(ctx, Objects) {
-    ctx.clearRect(0, 0, WIDTH, HEIGHT);
+    ctx.fillStyle = 'black';
+    ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
     Objects.forEach(obj => {
         obj.update();
@@ -56,7 +57,7 @@ class Ball {
         this._accelerateTowardsMouse();
 
         this.velocity.add(this.acceleration);
-        this.velocity.limit(5);
+        this.velocity.limit(20);
         this.position.add(this.velocity);
     }
 
@@ -78,7 +79,7 @@ class Ball {
         this.ctx.fill();
 
         this.ctx.lineWidth = this.radius / 8;
-        this.ctx.strokeStyle = 'red';
+        this.ctx.strokeStyle = '#FFFFE0';
         this.ctx.stroke();
     }
 }
