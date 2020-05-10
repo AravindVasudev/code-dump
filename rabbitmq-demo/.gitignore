@@ -1,1 +1,2 @@
-consumer/mq.log
+work-queue/consumer/mq.log
+pubsub/consumer/mq.log
