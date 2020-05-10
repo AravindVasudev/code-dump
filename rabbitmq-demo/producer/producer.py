@@ -12,11 +12,12 @@ print('Connected.')
 # Create a queue
 channel.queue_declare(queue='foo')
 
-# Say hello
-channel.basic_publish(exchange='',
-                      routing_key='foo',
-                      body='Hello World!')
-
-print('Done.')
-
-channel.close()
+try:
+    while True:
+        str = input("Type something (ctrl+c to quit): ")
+        channel.basic_publish(exchange='',
+                              routing_key='foo',
+                              body=str)
+except KeyboardInterrupt:
+    channel.close()
+    print('Done.')

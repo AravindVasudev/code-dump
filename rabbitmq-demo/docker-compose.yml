@@ -9,8 +9,6 @@ services:
     volumes:
       - ./producer:/usr/src/app
     restart: on-failure
-    links:
-      - "mq"
   consumer:
     build:
       context: consumer/
@@ -20,12 +18,7 @@ services:
     volumes:
       - ./consumer:/usr/src/app
     restart: on-failure
-    links:
-      - "mq"
   mq:
     image: rabbitmq:3.8.3
     ports:
       - "5672:5672"
-      - "15672:15672"
-    healthcheck:
-      test: [ "CMD", "nc", "-z", "localhost", "5672" ]
