@@ -20,5 +20,5 @@ services:
     restart: on-failure
   mq:
     image: rabbitmq:3.8.3
-    ports:
-      - "5672:5672"
+    expose:
+      - 5672
