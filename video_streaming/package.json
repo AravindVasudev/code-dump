@@ -1,0 +1,28 @@
+{
+  "name": "video_streaming",
+  "version": "1.0.0",
+  "description": "Testing video streaming",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AravindVasudev/code-dump.git"
+  },
+  "keywords": [
+    "video",
+    "streaming"
+  ],
+  "author": "aravindvasudev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AravindVasudev/code-dump/issues"
+  },
+  "homepage": "https://github.com/AravindVasudev/code-dump#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "multer": "^2.0.2",
+    "uuid": "^13.0.0"
+  }
+}
